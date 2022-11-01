@@ -7,7 +7,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:background="@drawable/backgroundnew"
-
     >
 
 
@@ -23,14 +22,14 @@
         app:srcCompat="@drawable/imagenew" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/emailText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
         android:background="@drawable/email"
         android:ems="10"
         android:hint="E mail"
-        android:inputType="textPersonName"
+        android:inputType="textEmailAddress"
 
         android:paddingLeft="25dp"
         android:paddingRight="25dp"
@@ -41,23 +40,22 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName3"
+        android:id="@+id/sifreText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:background="@drawable/email"
         android:ems="10"
         android:gravity="start|center"
-
         android:hint="Şifre"
-        android:inputType="textPersonName"
+        android:inputType="textPassword"
         android:paddingLeft="25dp"
         android:paddingRight="25dp"
         android:paddingBottom="5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
+        app:layout_constraintTop_toBottomOf="@+id/emailText" />
 
     <ImageButton
         android:id="@+id/imageButton2"
@@ -68,7 +66,7 @@
         android:onClick="giris"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName3"
+        app:layout_constraintTop_toBottomOf="@+id/sifreText"
         app:srcCompat="@drawable/loginnew" />
 
     <ImageButton
