@@ -4,8 +4,10 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/lenovo/AndroidStudioProjects/Adobe/app/src/main/res/drawable/back_ground_intro.xml" value="0.1685" />
+        <entry key="..\:/Users/lenovo/AndroidStudioProjects/Adobe/app/src/main/res/layout/activity_add.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/lenovo/AndroidStudioProjects/Adobe/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/lenovo/AndroidStudioProjects/Adobe/app/src/main/res/layout/activity_password.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/lenovo/AndroidStudioProjects/Adobe/app/src/main/res/layout/activity_upload.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/lenovo/AndroidStudioProjects/Adobe/app/src/main/res/layout/recyclerrow.xml" value="0.25416666666666665" />
       </map>
     </option>
