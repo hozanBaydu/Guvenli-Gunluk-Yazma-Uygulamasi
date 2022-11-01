@@ -2,6 +2,7 @@ package com.hozanbaydu.adobe;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.renderscript.ScriptGroup;
 import android.view.View;
@@ -26,7 +27,12 @@ public class PasswordActivity extends AppCompatActivity {
     }
 
 
+    public void addButton (View view){
 
+        Intent intent = new Intent(PasswordActivity.this,UploadActivity.class);
+        startActivity(intent);
+        finish();
+    }
 
 
 }
