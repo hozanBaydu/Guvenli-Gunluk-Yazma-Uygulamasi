@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
@@ -19,10 +20,12 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QuerySnapshot;
+import com.google.rpc.context.AttributeContext;
 import com.hozanbaydu.adobe.databinding.ActivityPasswordBinding;
 
 import java.util.ArrayList;
 import java.util.Map;
+import java.util.Objects;
 
 
 public class PasswordActivity extends AppCompatActivity {
@@ -32,6 +35,7 @@ public class PasswordActivity extends AppCompatActivity {
     private FirebaseFirestore firebaseFirestore;
     ArrayList<Model> passwordArrayList;
     Adapter RecyclerAdapter;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,7 +54,12 @@ public class PasswordActivity extends AppCompatActivity {
 
         getFromFirebase();
 
-        //RecyclerView
+
+
+
+
+
+
 
         binding.recyclerView.setLayoutManager(new LinearLayoutManager(this));
         RecyclerAdapter = new Adapter(passwordArrayList);
@@ -67,9 +76,14 @@ public class PasswordActivity extends AppCompatActivity {
 
     public void getFromFirebase(){
 
+
+       String email= Objects.requireNonNull(Objects.requireNonNull(firebaseAuth.getCurrentUser()).getEmail()).toString();
+        System.out.println(email);
+
+
         CollectionReference collectionReference = firebaseFirestore.collection("Posts");
 
-        collectionReference.orderBy("date", Query.Direction.DESCENDING).addSnapshotListener(new EventListener<QuerySnapshot>() {
+        collectionReference.orderBy("date", Query.Direction.DESCENDING).whereEqualTo("useremail",email).addSnapshotListener(new EventListener<QuerySnapshot>() {
             @Override
             public void onEvent(@Nullable QuerySnapshot queryDocumentSnapshots, @Nullable FirebaseFirestoreException e) {
 
