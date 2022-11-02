@@ -147,6 +147,7 @@ Intent intent = getIntent();
 
     }
 }
+```
 
 Uygulamayı yazan:Hozan BAYDU
 
