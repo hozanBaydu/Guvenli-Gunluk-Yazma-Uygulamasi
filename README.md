@@ -31,7 +31,7 @@ public void giris(View view){
     }
 ```
 
-Giriş sayfasındaki email texten ve sifretextten gerekli girdileri aldıktan sonra bilgileri yukarıdaki kodlar sayesinde firebaseye yollayıp doğruluğu hakkında bilgi alınır.
+Giriş sayfasındaki email textten ve sifretextten gerekli girdileri aldıktan sonra bilgileri yukarıdaki kodlar sayesinde firebaseye yollayıp doğruluğu hakkında bilgi alınır.
 
 ```sh
 firebaseAuth.createUserWithEmailAndPassword(email,password).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
