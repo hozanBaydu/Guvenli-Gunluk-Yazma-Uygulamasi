@@ -1,6 +1,9 @@
 package com.hozanbaydu.adobe;
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
@@ -36,9 +39,19 @@ public class Adapter extends RecyclerView.Adapter<Adapter.PostHolder> {
     }
 
     @Override
-    public void onBindViewHolder(@NonNull PostHolder holder, int position) {
+    public void onBindViewHolder(@NonNull PostHolder holder, @SuppressLint("RecyclerView") int position) {
 
         holder.recyclerRowBinding.textView2.setText(passwordArrayList.get(position).name);
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(holder.itemView.getContext(), DetailsActivity.class);
+                intent.putExtra("password",passwordArrayList.get(position));
+
+                holder.itemView.getContext().startActivity(intent);
+            }
+        });
     }
 
     @Override
