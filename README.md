@@ -149,6 +149,8 @@ Intent intent = getIntent();
 }
 ```
 
+!!Eğer uygulama mağazada yayınlanacaksa App Check sayesinde uygulamanın yetkilendirilip diğer uygulamalardan gelen veri okuma isteklerinin engellenmesi gerekiyordu.
+
 Uygulamayı yazan:Hozan BAYDU
 
 Tasarım:Adobexd,Canva
